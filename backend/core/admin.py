@@ -5,8 +5,8 @@ from .models import Department, Doctor, Apointment
 
 @admin.register(Apointment)
 class ApointmentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'doctor', 'date', 'time', 'email', 'phone_no', 'message', 'uuid')
-    list_filter = ('doctor', 'date', 'time')
+    list_display = ('name', 'date', 'time', 'email', 'phone_no', 'message', 'uuid')
+    list_filter = ('date', 'time')
     search_fields = ('name', 'doctor__name', 'date', 'time', 'email', 'phone_no', 'message', 'uuid')
     readonly_fields = ('uuid',)
     ordering = ('-date', '-time')

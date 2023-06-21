@@ -38,8 +38,8 @@ class Doctor(models.Model):
 
 
 class Apointment(models.Model):
-    department = models.ForeignKey(Department, on_delete=models.CASCADE)
-    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE,  blank=True, null=True)
+    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE,  blank=True, null=True)
     name = models.CharField(max_length=50)
     date = models.DateField(blank=True, null=True)
     time = models.TimeField(blank=True, null=True)
