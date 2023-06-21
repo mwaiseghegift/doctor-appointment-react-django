@@ -50,4 +50,4 @@ class Apointment(models.Model):
 
     def __str__(self):
         return self.name + " - " + self.doctor.name + " - " + str(self.date) + " - " + str(self.time)
-    
+

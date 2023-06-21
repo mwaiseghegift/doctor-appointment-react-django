@@ -1,5 +1,5 @@
-from core.api.serializers import DepartmentSerializer, DoctorSerializer, AppointmentSerializer
-from core.models import Department, Doctor, Appointment
+from core.api.serializers import AppointmentSerializer
+from core.models import Department, Doctor, Apointment
 from rest_framework import generics
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
